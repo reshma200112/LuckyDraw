@@ -7,44 +7,120 @@
   height: 100vh;
   width: 100vw;
 }
-.numberDivsContainer{
-    display: flex;
-    justify-content: center;
+.prizeDisplayDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 150px;
 }
-.congratsImg{
-    width: 40%;
+.prizeText{
+  color: white;
 }
-.congratsDiv{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.numberDivsContainer {
+  display: flex;
+  justify-content: center;
 }
-*{
-    padding: 0;
-    margin: 0;
+
+.congratsImg {
+  width: 40%;
 }
+
+.congratsDiv {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .numberContainer {
   display: flex;
   justify-content: space-around;
-  gap: 2px;
+  gap: 10px;
   margin-top: 20px;
+}
+.numberText {
+  font-family: fantasy;
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 3em;
+  font-weight: bold;
+  transform: skew(-15deg);
+  transition: transform 0.2s ease-in-out, scale 0.2s ease-in-out; /* Adjust the duration as needed */
+}
+
+.footerDiv{
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  bottom: 0;
+}
+.disabled {
+  pointer-events: none; /* Disable pointer events */
+  opacity: 0.5; /* Adjust opacity to visually indicate the disabled state */
+  cursor:not-allowed
+}
+.btnDiv{
+  cursor: pointer ;
+  background-image: url("../assets/spinBtn.png");
+  width: 340px;
+  height: 100px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.numberDiv {
+  box-shadow: 0 0 10px rgba(238, 123, 238, 0.689);
+  width: 114px;
+  height: 148px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .number {
-    width:105px;
-    height: 140px;
+  width: 115px;
+  height: 150px;
   font-size: 24px;
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 1px;
+  border-radius: 10px;
+  /* Adjust the border-radius for rounded corners if desired */
+  box-shadow: 0 0 10px rgba(28, 28, 236, 0.93);
+  /* Purple-colored shadow */
   margin: 5px;
-  transition: transform 2s ease-in-out; /* Adjust the duration as needed */
+  transition: transform 2s ease-in-out;
+  /* Adjust the duration as needed */
+}
+.prizeMessage{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.prizeText {
+  font-size: 2rem;
+  font-family:fantasy;
+  color: white;
+  font-size: 3em;
+  font-weight: bold;
+  transform: skew(-12deg);
+  text-shadow: 0 0 5px blue; /* Add blue shadow */
+  animation: colorChange 0.5s infinite alternate;
 }
 
-.spin {
-  transform: rotateX(
-    720deg
-  ); /* Adjust the rotation value for a more or less dramatic effect */
+@keyframes colorChange {
+  from {
+    color: white;
+  }
+  to {
+    color: red;
+  }
 }
-
-
